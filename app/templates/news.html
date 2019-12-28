@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static l10n %}
+
+{% block content %}
+    <div class="section singlepage">
+        <div class="container">
+            <div class="row pbot-main">
+                <div class="col-xs-12 col-md-8">
+                    {% for news in object_list %}
+                        <a name="news-{{ news.pk }}"></a>
+                        <div class="post-item">
+                            <div class="image-wrap">
+                                <img src="http://placehold.it/900x500" alt="..." class="img-responsive">
+                                <div class="meta">
+                                    <div class="blog-author">
+                                        <div class="blog-thumb">
+                                            <img class="img-responsive" src="http://placehold.it/60x60" alt="...">
+                                        </div>
+                                        by {{ news.author }}
+                                    </div>
+                                    <div class="blog-date">
+                                        <span>{{ news.created.day }}</span>{{ news.created|date:'F' }}</div>
+                                </div>
+                            </div>
+                            <h3 class="post-title"><a href="news-single.html" title="">{{ news.title }}</a></h3>
+                            <p>{{ news.body }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <div class="col-xs-12 col-md-4">
+                    <div class="widget recent-post">
+                        <h4 class="widget-heading">Actualités récentes</h4>
+                        <div class="widget-wrap">
+                            {% for news in object_list %}
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#news-{{ news.id }}">
+                                            <img class="media-object" src="http://placehold.it/60x60" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        <p>{{ news.title }}</p>
+                                        <div class="meta-date">
+                                            {{ news.created.date }}
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
