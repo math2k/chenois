@@ -15,7 +15,7 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-with open(os.path.join(BASE_DIR, 'chenois@', 'settings.json')) as f:
+with open(os.path.join(BASE_DIR, 'chenois', 'settings.json')) as f:
     s = json.load(f)
 
 # Quick-start development settings - unsuitable for production
@@ -27,7 +27,7 @@ SECRET_KEY = '%rz-7a9u*v%+6ha+$*l_x#-r6jxqw3d)mo86gr4cxl=hi_1m=6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec.math2k.net']
 
 # Application definition
 
@@ -124,3 +124,4 @@ LOCALE_NAME = 'fr_BE'
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
