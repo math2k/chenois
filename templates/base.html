@@ -90,7 +90,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><img src="{% static "images/logo.png" %}" alt=""/></a>
+            <a class="navbar-brand" href="/"><img src="{% static "images/logo.png" %}" alt=""/></a>
 
         </div>
         <nav class="navbar-collapse collapse">
@@ -113,9 +113,14 @@
     </div>
 </div>
 
-
-<!-- NEWS SECTION -->
 {% block content %}{% endblock %}
+
+<div class="section stat-client p-main bg-client">
+		<div class="container">
+			<div class="row">
+			</div>
+		</div>
+	</div>
 
 <!-- FOOTER SECTION -->
 <div class="footer">
@@ -128,10 +133,7 @@
                         <div class="footer-title">
                             <h4>ABOUT CLUB</h4>
                         </div>
-                        <p>This template is a micro niche for business categories, namely Pro Soccer business. there was
-                            an excess of this template is using HTML/CSS. Condimentum aliquam, mollit magna velit nec,
-                            tempor cursus vitae sit aliquet neque purus. Ultrices lacus proin conubia dictum tempus,
-                            tempor pede vitae faucibus</p>
+                        <p>{{ text_footer }}</p>
                         <div class="footer-sosmed">
                             <a href="#" title="">
                                 <div class="item">
@@ -193,7 +195,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <p class="ftex">&copy; 2019 Espérance Chenois - All Rights Reserved</p>
+                    <p class="ftex">{{ text_copyright }}</p>
                 </div>
             </div>
         </div>

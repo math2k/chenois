@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% load static l10n %}
+{% block title %}Actualités{% endblock %}
+{% block subtitle %}Actualités{% endblock %}
 
 {% block content %}
     <div class="section singlepage">
@@ -22,7 +24,7 @@
                                         <span>{{ news.created.day }}</span>{{ news.created|date:'F' }}</div>
                                 </div>
                             </div>
-                            <h3 class="post-title"><a href="news-single.html" title="">{{ news.title }}</a></h3>
+                            <h3 class="post-title">{{ news.title }}</h3>
                             <p>{{ news.body }}</p>
                         </div>
                     {% endfor %}

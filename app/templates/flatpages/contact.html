@@ -1,5 +1,126 @@
 {% extends "base.html" %}
 
+
 {% block content %}
-CONTACT!!
+<div class="section singlepage" >
+		<div class="container">
+
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="page-title">
+						<h2 class="lead">{{ flatpage.title }}</h2>
+						<div class="border-style"></div>
+						<div class="page-description">
+							<p>{{ flatpage.content }}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+
+				<div class="col-sm-12 col-md-12">
+
+					<iframe width="1140" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJS1kiccLRw0cRlwK0wuxuaZk&key=AIzaSyCDK_nsNZZ9yIljOiHT9-E6ta1iHYSHLoU" allowfullscreen></iframe>
+				</div>
+
+				<div class="contact-content">
+
+					<div class="col-sm-12 col-md-7">
+						<div class="form-question">
+							<p class="contact-title">QUESTION</p>
+							<p>Vous pouvez nous envoyer un message en utilisant le formulaire ci-dessous. Nous vous répondrons dès que possible.</p>
+							<br />
+							<form action="#" class="form-contact shake form-horizontal" id="contactForm"  data-toggle="validator">
+								<div class="form-group">
+									<label for="name" class="col-sm-4 control-label">Votre nom*</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="name" placeholder="Votre nom *" required>
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="subject" class="col-sm-4 control-label">Sujet</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="subject" placeholder="Sujet">
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="email" class="col-sm-4 control-label">Votre adresse email</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="email" placeholder="Votre adresse email *" required>
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="phone" class="col-sm-4 control-label">Numéro de téléphone</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control" id="phone" placeholder="Numéro de téléphone">
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="message" class="col-sm-4 control-label">Message *</label>
+									<div class="col-sm-8">
+										<textarea id="message" class="form-control" rows="5" placeholder="Message *"></textarea>
+										<div class="help-block with-errors"></div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<div class="col-sm-offset-4 col-sm-8">
+										<button type="submit" class="btn btn-default">ENVOYER</button>
+									</div>
+									<div id="success"></div>
+								</div>
+							</form>
+
+						</div>
+					</div>
+
+					<div class="col-sm-12 col-md-5">
+						<div class="contact-address">
+
+							<div class="row">
+								<div class="col-sm-12 col-md-5">
+									<div class="contact-address-item">
+										<p class="contact-title">HEAD OFFICE</p>
+										<p class="contact-address-heading">Address</p>
+										<p>
+										4125 Tuah Karya, Panam,<br />
+										Pekanbaru<br />
+										Riau 28292
+										</p>
+										<br />
+
+										<p class="contact-address-heading">Phone</p>
+										<p>
+										+62 8018 2817 1281<br />
+										+62 8901 8108 3820
+										</p>
+										<br />
+										<p class="contact-address-heading">Working Hours</p>
+										<p>
+										SUN - MON &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 09:00 - 22:00<br />
+										FRIDAY  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; We Closed
+										</p>
+										<br />
+									</div>
+								</div>
+								<div class="col-sm-12 col-md-7">
+									<img src="http://placehold.it/715x875" alt="" class="img-responsive" />
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
 {% endblock %}

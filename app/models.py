@@ -11,3 +11,11 @@ class NewsItem(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Text(models.Model):
+    key = models.CharField(max_length=255, primary_key=True)
+    text = models.TextField()
+
+    def __str__(self):
+        return self.key

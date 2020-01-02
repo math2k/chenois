@@ -10,7 +10,7 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data()
-        context['news'] = NewsItem.objects.filter(published=True).order_by('-created')[:3]
+        #context['news'] = NewsItem.objects.filter(published=True).order_by('created')[:3]
         return context
 
 
@@ -18,3 +18,8 @@ class NewsListView(ListView):
 
     template_name = "news.html"
     queryset = NewsItem.objects.filter(published=True).order_by('-created')
+
+
+class ContactFormView(TemplateView):
+
+    template_name = "flatpages/contact.html"

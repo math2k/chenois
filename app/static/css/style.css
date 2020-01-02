@@ -1723,7 +1723,7 @@ td.tw10{
 	background-color: #29ABE2;
 }
 .bg-client{
-	background:url('http://placehold.it/1920x700') no-repeat center center; 
+	background:url('../images/client-bg.jpg') no-repeat center center;
 	-webkit-background-size: cover; 
 	-moz-background-size: cover; 
 	-o-background-size: cover; 

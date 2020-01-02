@@ -27,7 +27,7 @@ SECRET_KEY = '%rz-7a9u*v%+6ha+$*l_x#-r6jxqw3d)mo86gr4cxl=hi_1m=6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ec.math2k.net']
+ALLOWED_HOSTS = ['ec.math2k.net', '*']
 
 # Application definition
 
@@ -82,8 +82,10 @@ WSGI_APPLICATION = 'chenois.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        "HOST": "127.0.0.1",
         'NAME': 'chenois',
         'USER': 'chenois',
+        'PORT': 3333, # ssh -L 3333:127.0.0.1:3306 math@math2k.net -N
         'PASSWORD': s['db_password']
     }
 }

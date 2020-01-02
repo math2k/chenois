@@ -2,5 +2,27 @@
 {% block title %}{{ flatpage.title }}{% endblock %}
 {% block subtitle %}{{ flatpage.title }}{% endblock %}
 {% block content %}
-{{ flatpage.content }}
+
+<div class="section singlepage">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="page-title">
+						<h2 class="lead">News</h2>
+						<div class="border-style"></div>
+						<div class="page-description">
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+                    {{ flatpage.content }}
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
