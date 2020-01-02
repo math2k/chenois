@@ -80,14 +80,7 @@ WSGI_APPLICATION = 'chenois.wsgi.application'
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        "HOST": "127.0.0.1",
-        'NAME': 'chenois',
-        'USER': 'chenois',
-        'PORT': 3333, # ssh -L 3333:127.0.0.1:3306 math@math2k.net -N
-        'PASSWORD': s['db_password']
-    }
+    'default': s['database']
 }
 
 # Password validation
