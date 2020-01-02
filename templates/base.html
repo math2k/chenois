@@ -95,11 +95,7 @@
         </div>
         <nav class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{% url "home" %}">HOME</a></li>
-                <li><a href={% url "news" %}>NEWS</a></li>
-                {% for page in flatpages %}
-                    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-                {% endfor %}
+                {% include "inc/menu.html" %}
             </ul>
         </nav>
     </div>
@@ -184,11 +180,7 @@
                             <h4>INFORMATION</h4>
                         </div>
                         <ul class="sitemap">
-                            <li><a href="{% url "home" %}" title="">Home</a></li>
-                            <li><a href="about.html" title="">About</a></li>
-                            <li><a href="team.html" title="">Team</a></li>
-                            <li><a href="base.html" title="">News</a></li>
-                            <li><a href="contact.html" title="">Contact</a></li>
+                            {% include "inc/menu.html" %}
                         </ul>
                     </div>
                 </div>

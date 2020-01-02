@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<li><a href="{% url "home" %}">Home</a></li>
+<li><a href={% url "news" %}>News</a></li>
+{% for page in flatpages %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% endfor %}
